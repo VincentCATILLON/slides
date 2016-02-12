@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js – The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/moon.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>navitia.io<br />&times;<br />Pattern Lab</h1>
+					<h3>Retours d'expérience</h3>
+					<p>
+						<small>by Thomas Noury / <a href="http://twitter.com/is06">@is06</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Vous allez voir quoi ?</h2>
+					<ol>
+						<li>Pourquoi on a utilisé Pattern Lab</li>
+						<li>Les maquettes navitia.io</li>
+						<li>Le fonctionnement de l'outil</li>
+						<li>Faire du design un bundle</li>
+						<li>Développements pour la productivité</li>
+						<li>Pistes d'amélioration</li>
+					</ol>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h2>Pourquoi ce truc ?????</h2>
+					</section>
+
+					<section>
+						<h3>Ça aide à s'organiser</h3>
+						<img src="images/plab/organization.jpg" />
+					</section>
+					<section>
+						<h3>L'interface permet d'avoir un catalogue de composants réutilisables</h3>
+						<img src="images/plab/components2.png" />
+					</section>
+					<section>
+						<h3>Les patterns peuvent en inclure d'autres</h3>
+						<img src="images/plab/components3.png" />
+					</section>
+					<section>
+						<h3>On peut visualiser du responsive design facilement</h3>
+						<img src="images/plab/responsive.png" />
+					</section>
+					<section>
+						<h3>L'outil peut réunir designer et intégrateur</h3>
+						<img src="images/plab/reunion.png" />
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Les maquettes navitia.io</h2>
+					</section>
+
+					<section>
+						<h3>Pensées en composants</h3>
+						<img src="images/plab/maquette.png" />
+					</section>
+
+					<section>
+						<h3>Responsive et "mobile first"</h3>
+						<img src="images/plab/maquette_phone.png" />
+						<img src="images/plab/maquette_tablet.png" />
+						<img src="images/plab/maquette_desktop.png" />
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Le fonctionnement du bousin</h2>
+					</section>
+
+					<section>
+						<h3>On développe les patterns dans source</h3>
+
+						<img src="images/plab/source.png" />
+					</section>
+
+					<section>
+						<h3>On compile et tout est généré dans public</h3>
+
+						<code>php core/console --generate</code>
+					</section>
+
+					<section>
+						<h3>TADAA !</h3>
+
+						<img src="images/plab/public.png" />
+					</section>
+
+					<section>
+						<h3>Et dans l'outil...</h3>
+
+						<img src="images/plab/atoms.png" />
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h2>Faire du design un bundle</h2>
+					</section>
+
+					<section>
+						<h3>Similitudes entre PLab et un bundle Symfony</h3>
+						<img src="images/plab/bundle1.png" />
+						<img src="images/plab/bundle2.png" />
+					</section>
+
+					<section>
+						<h3>Le CSS est déjà dans public ! \o/</h3>
+
+						<p>Quand on génère le design, le CSS est copié depuis le répertoire source vers public</p>
+						<p>C'est déjà géré par Pattern Lab, on en profite !</p>
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h2>Développements pour la productivité</h2>
+					</section>
+
+					<section>
+						<h3>Conversion des twig</h3>
+
+						<p>Commande : <strong>design:pattern:import</strong></p>
+
+						<pre class="fragment"><code class="hljs" data-trim>
+{% include 'atoms-logo' %}
+						</code></pre>
+
+						<pre class="fragment"><code class="hljs" data-trim>
+{% include 'CanalTPNavitiaIoDesignBundle:Patterns:atoms/logo.html.twig' %}
+						</code></pre>
+
+						<p class="fragment">Puis copie vers <strong>views/Patterns</strong></p>
+					</section>
+
+					<section>
+						<h3>Automatiser et watcher</h3>
+
+						<ul>
+							<li><code>compass compile</code></li>
+							<li><code>php core/console --generate</code></li>
+							<li><code>php app/console design:pattern:import</code></li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Traductions</h3>
+
+						<p>On a réinventé la roue... enfin presque !</p>
+
+						<pre><code class="hljs" data-trim>
+$filter = new Twig_SimpleFilter("trans", function ($id, $vars,
+  $context = 'translations',
+  $locale = 'en') {
+  // Un peu de code ici
+  return $text;
+});
+						</code></pre>
+					</section>
+
+					<section>
+						<p>On les stocke au même endroit que dans un bundle</p>
+						<img src="images/plab/translations.png" />
+					</section>
+
+					<section>
+						<p>On utilise le filtre <strong>trans</strong> comme d'hab</p>
+
+						<pre><code class="hljs">
+{% include "molecules-section-header" with {
+  "title": "features.title"|trans({}, "homepage"),
+  "description": "features.subtitle"|trans({}, "homepage")}
+%}
+						</code></pre>
+
+						<p>* Ça ne gère juste pas encore les %variables%</p>
+					</section>
+
+					<section>
+						<h3>Autres fonctions</h3>
+
+						<ul>
+							<li>asset</li>
+							<li>path</li>
+							<li>...</li>
+						</ul>
+					</section>
+
+				</section>
+
+				<section>
+					<h2>Pistes d'amélioration</h2>
+
+					<ul>
+						<li>Convertir le sous-module en composant géré par Composer</li>
+						<li>Peut-être décorreler l'outil du design</li>
+						<li>... des idées ?</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Almost done</h1>
+					<p class="fragment">Des questions ?</p>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
