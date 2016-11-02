@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js – The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Sprint Review 7</h1>
+					<h3>La démo... réinventée !</h3>
+					<p>
+						<small>Proudly presented by Jennifer Gozo, Patrick Qian, Jean-Baptiste Crestot, Thomas Noury and our beloved POs: Viriginie Schmidt, Vincent Mulard, Maxime Henon, Etienne Bousquié.</small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Vous allez voir quoi ?</h2>
+					<ol>
+						<li class="fragment">Evolutions Navitia</li>
+						<li class="fragment">Transilien</li>
+						<li class="fragment">Migrations ADM v2</li>
+						<li class="fragment">Web</li>
+						<li class="fragment">Stats !!</li>
+						<li class="fragment">Autres tâches</li>
+					</ol>
+				</section>
+
+				<section>
+					<h2>Evolutions Navitia</h2>
+
+					<section>
+						<ul>
+							<li class="fragment">POI dans l'Autocomplete<br />
+								<small>
+									Pour les clients de l'ADM v2<br />
+									<strong style="color: #448800;">Done!</strong>
+								</small>
+							</li>
+							<li class="fragment">Audit de solution itinéraire routier<br />
+								<small>
+									Dans le cadre du projet des nouvelles mobilités<br />
+									<strong style="color: #448800;">Done!</strong>
+								</small>
+							</li>
+							<li class="fragment">
+								Isofonctionnalité & performances du calculateur routier<br />
+								<small>
+									Dans le cadre du projet des nouvelles mobilités
+								</small>
+							</li>
+						</ul>
+						<aside class="notes">
+							Performances routier : almost done 70%
+						</aside>
+					</section>
+
+					<section>
+						<img src="images/demo7/schema-routier1.png" style="margin-top: 100px; background-color: #ffffff;" />
+					</section>
+					<section>
+						<img src="images/demo7/schema-routier2.png" style="margin-top: 100px; background-color: #ffffff;" />
+					</section>
+				</section>
+
+				<section>
+					<h2>Transilien</h2>
+					<section>
+						<ul>
+							<li class="fragment">
+								Correction d'une anomalie de référentiels<br />
+								<small>
+									Pour Transilien<br />
+									Objectif : passer en "run"<br />
+									<strong style="color: #448800;">Done!</strong>
+								</small>
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<img src="images/demo7/transilien1.png" style="margin-top: 100px;" />
+					</section>
+
+					<section>
+						<img src="images/demo7/transilien2.png" style="margin-top: 100px;" />
+					</section>
+
+					<section>
+						<img src="images/demo7/transilien3.png" style="margin-top: 100px;" />
+					</section>
+
+					<section>
+						<img src="images/demo7/transilien4.png" style="margin-top: 100px;" />
+					</section>
+
+					<aside class="notes">
+						<strong>Coût :</strong> 30 jours/hommes
+					</aside>
+				</section>
+
+				<section>
+					<h2>Migrations ADM v2</h2>
+					<ul>
+						<li class="fragment">
+							ADM v2 Horizon</br />
+							<small>
+								Pour Keolis Châteauroux<br />
+								<strong style="color: #448800;">Done!</strong>
+							</small>
+						</li>
+						<li class="fragment">
+							ADM v2 Vermeille<br />
+							<small>
+								Pour Société de Transport de Sherbrooke (STS)<br />
+								<strong style="color: #448800;">Done!</strong>
+							</small>
+						</li>
+						<li class="fragment">
+							Mise à jour de l'appli Open Data dans le store interne<br />
+							<small>
+								Pour les product managers de Kisio Digital<br />
+								<strong style="color: #448800;">Done!</strong>
+							</small>
+						</li>
+					</ul>
+					<aside class="notes">
+						<strong>ADM :</strong> Montrer que l'accueil<br />
+						<strong>Open Data :</strong> Montrer le multicoverage
+					</aside>
+				</section>
+
+				<section>
+					<h2>Web</h2>
+					<ul>
+						<li class="fragment">Plug'n'play Irigo Angers<br />
+							<small>
+								Pour Keolis Angers<br />
+								<strong style="color: #448800;">Done!</strong>
+							</small>
+						</li>
+						<li class="fragment">Démo VLS<br />
+							<small>
+								Pour les filiales Keolis<br />
+								<strong style="color: #448800;">Done!</strong>
+							</small>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Stats !!</h2>
+					<section>
+						<ul>
+							<li class="fragment">Metrique "nombre de hits par coverage navitia"
+								<small>
+									Pour Kisio Digital<br />
+									<strong style="color: #448800;">Done!</strong>
+								</small>
+							</li>
+							<li class="fragment">Tracking Google Tag Manager dans navitia.io
+								<small>
+									Pour Pochette (la product manager navitia.io)<br />
+									<strong style="color: #448800;">Done!</strong>
+								</small>
+							</li>
+							<li class="fragment">Tracking Google Tag Manager dans les PnP
+								<small>
+									Pour les clients qui intègrent le PnP<br />
+									<strong style="color: #448800;">Done!</strong>
+								</small>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<img src="images/demo7/schema-GTM.png" style="margin-top: 100px; background-color: #ffffff;" />
+					</section>
+					<aside class="notes">
+						<strong>GTM navitia.io :</strong> Expliquer pourquoi ça a été traité (objectifs en cours de sprint)<br />
+						<strong>Objectif Métrique :</strong> ecarter les coverages non utilisés
+					</aside>
+				</section>
+
+				<section>
+					<h2>Autres tâches</h2>
+					<ul>
+						<li>Pour le STIF : optimisations diverses</li>
+						<li>Pour Apple : extrapolation des données...</li>
+						<li>Pour Setram : analyse d'un bug de terminus partiels</li>
+						<li>Kronos : gestions des abonnés aux surveillances</li>
+						<li>Pour les AOT : Bug de superposition des contrôles Gmap et bouton "Voir la liste"</li>
+						<li>ADM Bibus : correction d'un bug de notification</li>
+						<li>Mobile Wizard : correction d'un bug concernant l'app_id</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Merci à tous !</h2>
+					<p class="fragment">Faisons un ROTI !</p>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
